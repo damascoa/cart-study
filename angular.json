@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cart-study"
+    }
+  },
+  "defaultProject": "cart-study",
+  "cli": {
+    "analytics": false
+  }
 }
