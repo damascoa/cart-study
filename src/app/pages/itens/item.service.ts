@@ -13,9 +13,9 @@ export class ItemService {
     this.itens.push('Item 2');
     this.itens.push('Item 3');
     this.itens.push('Item 4');
-   }
+  }
 
-   getItens(){
-     return this.itens;
-   }
+  getItens() {
+    return this.itens;
+  }
 }

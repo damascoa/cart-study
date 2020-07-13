@@ -7,7 +7,7 @@ import { MessageService } from 'src/app/shared/message.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cart: any[] = [];
+  cart: string[] = [];
 
   constructor(private _msg: MessageService) { }
 
@@ -15,7 +15,12 @@ export class CartComponent implements OnInit {
     this._msg.getMessages().subscribe(data => {
       console.log(data);
       this.cart.push(data);
+      sessionStorage.setItem('cart', JSON.stringify(this.cart));
     });
+    if (sessionStorage.getItem('cart') != null) {
+      this.cart = JSON.parse(sessionStorage.getItem('cart'));
+    }
+
   }
 
 }
